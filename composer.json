@@ -1,5 +1,5 @@
 {
-    "name": "worksome/exchange",
+    "name": "bishwajitcadhikary/currency-exchange",
     "description": "Check Exchange Rates for any currency in Laravel.",
     "keywords": [
         "worksome",
@@ -9,6 +9,11 @@
     "homepage": "https://github.com/worksome/exchange",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Bishwajit Adhikary",
+            "email": "bishwajitcadhikary@gmail.com",
+            "role": "Developer"
+        },
         {
             "name": "Luke Downing",
             "email": "lukeraymonddowning@gmail.com",
@@ -32,8 +37,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Worksome\\Exchange\\": "src",
-            "Worksome\\Exchange\\Database\\Factories\\": "database/factories"
+            "Worksome\\Exchange\\": "src"
         }
     },
     "autoload-dev": {
@@ -71,6 +75,6 @@
             }
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
