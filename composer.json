@@ -1,0 +1,76 @@
+{
+    "name": "worksome/exchange",
+    "description": "Check Exchange Rates for any currency in Laravel.",
+    "keywords": [
+        "worksome",
+        "laravel",
+        "exchange"
+    ],
+    "homepage": "https://github.com/worksome/exchange",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luke Downing",
+            "email": "lukeraymonddowning@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^10.0 || ^11.0",
+        "nunomaduro/termwind": "^1.15 || ^2.0",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.5",
+        "nunomaduro/collision": "^7.0 || ^8.1",
+        "larastan/larastan": "^2.6",
+        "orchestra/testbench": "^8.0 || ^9.0",
+        "pestphp/pest": "^2.33",
+        "pestphp/pest-plugin-laravel": "^2.2",
+        "worksome/coding-style": "^2.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Worksome\\Exchange\\": "src",
+            "Worksome\\Exchange\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Worksome\\Exchange\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "lint": "vendor/bin/ecs --fix",
+        "test:unit": "vendor/bin/pest",
+        "test:coverage": "vendor/bin/pest --coverage",
+        "test:types": "vendor/bin/phpstan analyse",
+        "test:style": "vendor/bin/ecs",
+        "test": [
+            "@test:style",
+            "@test:types",
+            "@test:unit"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "worksome/coding-style": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Worksome\\Exchange\\ExchangeServiceProvider"
+            ],
+            "aliases": {
+                "Exchange": "Worksome\\Exchange\\Facades\\Exchange"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
